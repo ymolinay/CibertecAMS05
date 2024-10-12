@@ -25,6 +25,11 @@ class ItemTaskAdapter() : RecyclerView.Adapter<ItemTaskViewHolder>() {
 
     override fun getItemCount() = listTask.size
 
+    fun addItems(list: List<Task>) {
+        listTask = list
+        notifyDataSetChanged()
+    }
+
 
 }
 

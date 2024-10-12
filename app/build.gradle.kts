@@ -1,7 +1,10 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
+
+// @ anotaciones - database autogenerado
 
 android {
     namespace = "com.cibertec.myciberapps05"
@@ -53,6 +56,8 @@ dependencies {
 
     // Para usar Coroutines en Room (opcional, pero recomendado)
     implementation("androidx.room:room-ktx:2.5.1")
+    implementation("androidx.room:room-runtime:2.5.1")
+    kapt("androidx.room:room-compiler:2.5.1")
 
     // Retrofit (cliente API REST) & GSON
     implementation("com.squareup.retrofit2:retrofit:2.9.0")

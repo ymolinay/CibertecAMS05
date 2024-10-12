@@ -3,7 +3,7 @@ package com.cibertec.myciberapps05
 import androidx.room.Dao
 import androidx.room.Query
 
-@Dao
+@Dao // sqlite
 interface TaskDao {
 
     @Query("SELECT * FROM task_table")
